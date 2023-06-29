@@ -1,0 +1,47 @@
+https://math-coding.tistory.com/160
+
+1.
+
+
+class Node{
+    int val;
+    Node nextNode;
+
+    Node(){
+    val =0;
+    nextNode=null;
+    }
+
+}
+
+class LinkedList{
+
+int size=0;
+Node head;
+LinkedList() { head = null;}
+
+//1.
+public void printList(){
+Node temp = head;
+whiel (temp!= null){
+System.out.printLn(temp.val + " ,"
+temp = temp.next
+}
+}
+
+
+//end of LinkedList
+
+}
+
+Public class CreateNodeList{
+
+public static void main(){
+//1.using constructor, create LinkedList Object.
+LinkedList fruits = new LinkedList();
+fruits.insertFirst(10);
+fruits.insertFirst(20);
+
+
+}
+}

@@ -1,0 +1,75 @@
+package leetLinkedList02Done;
+//https://leetcode.com/problems/merge-two-sorted-lists/?envType=study-plan-v2&envId=top-interview-150
+// You are given the heads of two sorted linked lists list1 and list2.
+//
+//        Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.
+//
+//        Return the head of the merged linked list.
+//Input: list1 = [1,2,4], list2 = [1,3,4]
+//        Output: [1,1,2,3,4,4]
+//create algorithm iteratively. Time Complexity of O(m+n)
+
+import java.util.*;
+
+
+//definition of singly-linked list
+class ListNode{
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val){ this.val = val;}
+    ListNode(int val, ListNode next){
+        this.val=val;
+        this.next = next;
+    }
+}
+public class MergeTwoLists {
+    public ListNode mergeTwoLists(ListNode aList, ListNode bList) {
+//    // Keep track of the head of the new list, and the tail to add on to the newlist
+
+        ListNode head = new ListNode(); //Initialize head to the new empty list.
+        ListNode tail = head; //  firstly, set tail as head
+        // where head node is a null node by the end of all possible iteration.
+        // we are changing the position of tail instead of head, here.
+
+        //iterate unitl we reach the end of the one list.
+        while (aList != null && bList != null) {
+            if (aList.val < bList.val) {
+                tail.next = aList;
+                aList = aList.next;
+
+            } else { //if aList.val >= bList.val
+                tail.next = bList;
+                bList = bList.next;
+            }
+
+            tail = tail.next;
+            // update the 'tail' to 'tail.next' which 'tail.next' is the node that we just added in the while loop.
+        }
+        tail.next = (aList == null ? aList : bList);
+        //once we are done with iterating these two lists,
+        //
+//        return head.next;
+
+        return head;
+
+
+    }
+        public static void main (String args[]){
+        //ListNode temp=head;
+        ListNode aLists= new ListNode(1,2);
+        // ListNode aLists= new ListNode<int>();
+        //{1,2,4};
+        ListNode bLists=new ListNode(1,3);
+        ListNode mergedList;
+
+        mergedList =mergeTwoLists(aLists, bLists);
+
+
+
+        }
+
+
+}
+
+

@@ -1,0 +1,14 @@
+Result:
+
+Created Linked list is: 1 3 5
+Created Linked list.head is: leetLinkedList02Done.ListNode@7a5d012c
+Created Linked list.head.val is: 1
+
+Created Linked list 2 is: 2 4 6
+Created LinkedList2.head is: leetLinkedList02Done.ListNode@26ba2a48
+Created  LinkedList2.head.val is: 2
+Created Linked list 2 is: 2 4 6
+mergeList function() call
+
+Created Merged Linkedlist is: 1,2,3,4,5,6,
+Process finished with exit code 0

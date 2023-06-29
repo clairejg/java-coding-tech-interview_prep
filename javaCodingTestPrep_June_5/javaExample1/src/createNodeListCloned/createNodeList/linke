@@ -1,0 +1,11 @@
+https://math-coding.tistory.com/160
+
+Node getNodeAt(int position){
+    Node current = head;
+
+    while(current!= null && --positoin >=0){
+    current =current.next
+    }
+
+
+}

@@ -1,0 +1,11 @@
+If we want to pass the list as a parameter, all we have to pass is a reference to the first node. For example, the method printList takes a single node as an argument. Starting with the head of the list, it prints each node until it gets to the end (indicated by the null reference).
+
+    public static void printList (Node list) {
+        Node node = list;
+
+        while (node != null) {
+            System.out.print (node);
+            node = node.next;
+        }
+        System.out.println ();
+    }
